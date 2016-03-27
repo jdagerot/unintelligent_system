@@ -8,7 +8,6 @@
 - En zwave sladdbrytare
 - Diverse telldus relän
 - Diverse telldus brytare
-
 - 2 Raspberry PI (2&3)
 - Ett RazBerry kontrollkort
 - En tellstick DUO
@@ -28,7 +27,7 @@ _sensorCollecting_ lyssnar sensordata och sparar i databasen. Den är friståend
 
 _tellstickcontrol_ lyssnar på knapptryckningar från tellsticken och släcker/tänder som den skall, den uppdaterar också databasen. Dock berättar den inte för webservern att någonting hänt (ännu)
 
-_webservern_ servar alla klienter, i huvudsak RPi, det är här den mesta logiken ligger. Den sätter upp en socket.io mot alla anslutna klienter och skickar all information genom meddelanden i socketen. När en klient tänder en lampa till exempel så tänds lampan och ett meddelande broadcastas till alla sockets om att lampans status uppdaterats. Det är för när detta meddelande kommer som ikonen i gränssnittet byter färg. 
+_webservern_ servar alla klienter, i huvudsak RPI2:an med touchskärm, men även webläsare, telefoner och iPads. Det är här den mesta logiken ligger. Den sätter upp en socket.io mot alla anslutna klienter och skickar all information genom meddelanden i socketen. När en klient tänder en lampa till exempel så tänds lampan och ett meddelande broadcastas till alla sockets om att lampans status uppdaterats. Det är för när detta meddelande kommer som ikonen i gränssnittet byter färg. 
 
 ###zwave/telldus
 Jag har en keywordlista med alla kända enheter oavsett protocol, just nu ser listan ungefär ut såhär:
