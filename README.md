@@ -33,31 +33,31 @@ _webservern_ servar alla klienter, i huvudsak RPi, det är här den mesta logike
 ###zwave/telldus
 Jag har en keywordlista med alla kända enheter oavsett protocol, just nu ser listan ungefär ut såhär:
 
-{
-	"zwave" : {
-		1 : {
-			node_id: 1,
-			value: false
-		}
-	},
-	telldus : {
-		1 : {
-			node_id: 1,
-			value: true,
-			dimlevel : 128
-		}
-	} 
-}
+	{
+		"zwave" : {
+			1 : {
+				node_id: 1,
+				value: false
+			}
+		},
+		telldus : {
+			1 : {
+				node_id: 1,
+				value: true,
+				dimlevel : 128
+			}
+		} 
+	}
 
 När jag sparar undan listan i databasen formaterar jag om den lite så en record ser ut så här i mongoDB:
 
-{
-	_id : {
-		protocol : "zwave",
-		node_id : 1
-	},
-	value: false,
-}
+	{
+		_id : {
+			protocol : "zwave",
+			node_id : 1
+		},
+		value: false,
+	}
 
 Jag skall skriva en ny modul för hanteringen av in-memory-listan, just nu är det väldigt nära exempelkoden som kom med node-openzwave-shared.
 
