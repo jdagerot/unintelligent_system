@@ -4,23 +4,23 @@
 
 ### Systemet består av följande hårdvara:
 
--Diverse zwave relän
--En zwave sladdbrytare
--Diverse telldus relän
--Diverse telldus brytare
+- Diverse zwave relän
+- En zwave sladdbrytare
+- Diverse telldus relän
+- Diverse telldus brytare
 
--2 Raspberry PI (2&3)
--Ett RazBerry kontrollkort
--En tellstick DUO
--En 7" touchskärm
+- 2 Raspberry PI (2&3)
+- Ett RazBerry kontrollkort
+- En tellstick DUO
+- En 7" touchskärm
 
 ###Tjänster
 På RPi3 körs fyra tjänster:
 
--node sensorCollecting
--node tellstickcontrol
--node webserver
--mongoDB
+- node sensorCollecting
+- node tellstickcontrol
+- node webserver
+- mongoDB
 
 På RPi2 körs bara en webläsare i kioskläge som är hårdkodad att gå mot RPi3:an. (Webservern)
 
