@@ -20,6 +20,7 @@ På RPi3 körs fyra tjänster:
 - node tellstickcontrol
 - node webserver
 - mongoDB
+- open-zwave
 
 På RPi2 körs bara en webläsare i kioskläge som är hårdkodad att gå mot RPi3:an. (Webservern)
 
